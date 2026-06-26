@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@200;400;600;800&display=swap');
+
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --primary: #ef394e;   /* رنگ نزدیک دیجی‌کالا */
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+body {
+  margin: 0;
+  font-family: "Vazirmatn", sans-serif;
+  background: var(--bg);
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 20px;
+}
+
+.search {
+  flex: 1;
+  margin: 0 20px;
+  display: flex;
+}
+
+.search input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.search button {
+  padding: 10px 15px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  border-radius: 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+}
+
+.nav button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ===== CATEGORY BAR ===== */
+.categories {
+  display: flex;
+  gap: 10px;
+  padding: 10px 20px;
+  overflow-x: auto;
+  background: white;
+}
+
+.cat {
+  padding: 8px 12px;
+  background: #f3f4f6;
+  border-radius: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* ===== PRODUCT GRID ===== */
+.container {
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+/* ===== PRODUCT CARD ===== */
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: var(--shadow);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 14px;
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+.price {
+  color: var(--primary);
+  font-weight: 800;
+}
